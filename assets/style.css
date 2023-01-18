@@ -45,6 +45,7 @@ body {
 /*primary end*/
 
 .bodyWrapper {
+	max-width: 1200px;
     width: 90%;
     margin: 50px auto;
 }
