@@ -229,6 +229,7 @@ input[type=number] {
     left: 45%;
     transform-origin: bottom;
     transform: rotate(0deg);
+    transition: all linear .5s;
 }
 
 .resultSec .rightSec .meterWrapper .meter:after {
