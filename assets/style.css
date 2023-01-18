@@ -167,6 +167,7 @@ input[type=number] {
 
 .resultSec .leftSec .resultWrapper .gName {
     font-weight: 700;
+    transition: all linear .3s;
 }
 
 .resultSec .leftSec .resultWrapper .edpiValue {
@@ -184,6 +185,7 @@ input[type=number] {
 
 .resultSec .leftSec .sensWrapper .senslvl {
     font-weight: 700;
+    transition: all linear .3s;
 }
 
 .resultSec .rightSec {
