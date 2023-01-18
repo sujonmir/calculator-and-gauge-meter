@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- jQuery start -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- jQuery end -->
+    <title>Fortnite eDPI Calculator</title>
+</head>
+
+<body>
+    <div class="bodyWrapper">
+        <section class="pHeader" id="pHeader">
+            <h1 class="header"><span>eDPI</span> Calculator</h1>
+        </section>
+        <section id="contentBody" class="contentBody">
+            <div class="inputSec">
+                <p class="nText"><span>1. </span> Input DPI</p>
+                <input type="number" class="inputField" placeholder="Enter your mouse DPI" id="dpi">
+            </div>
+            <div class="inputSec bgLight">
+                <p class="nText"><span>2. </span> Input in-game-sensitivity</p>
+                <input type="number" class="inputField" placeholder="Enter your game sensitivity" id="sensitivity">
+            </div>
+            <div class="resultSec">
+                <div class="leftSec">
+                    <p class="nText">Result</p>
+                    <div class="resultWrapper nText">
+                        <span id="gName" class="gName">Valorant </span>
+                        eDPI
+                        <span class="edpiValue" id="edpiValue">-</span>
+                    </div>
+                    <div class="sensWrapper nText">
+                        <span class="senslvl" id="senslvl">Medium </span>
+                        sens
+                    </div>
+                </div>
+                <div class="rightSec">
+                    <div class="meterWrapper">
+                        <div class="meter" id="meter">
+                            <div id="meterK"></div>
+                        </div>
+                        <div class="mInfo">
+                            <div class="mInfoWrapper">
+                                <span>LOW SENS</span>
+                                <span class="lowSenslvl">0-40</span>
+                                <span class="pl10">MED SENS</span>
+                                <span class="medSenslvl">40-80</span>
+                                <span class="pl10">HIGH SENS</span>
+                                <span class="highSenslvl">80+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

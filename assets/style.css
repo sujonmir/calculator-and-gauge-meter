@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*style start from here ↓*/
+
+/*primary start*/
+:root {
+    --bg: #0e111b;
+    --white: #fff;
+    --blue: #035ad2;
+    --bgLighter: #131722;
+    --lightBlue: #006cff;
+    --grey: #333746;
+    --lightGrey: rgba(255, 255, 255, .6);
+    --green: #158248;
+    --yellow: #ecfd06;
+    --tomato: #fd4400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg);
+    color: var(--white);
+}
+
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.nText {
+    font-size: 16px;
+}
+
+.bgLight {
+    background: var(--bgLighter);
+}
+
+/*primary end*/
+
+.bodyWrapper {
+    width: 90%;
+    margin: 50px auto;
+}
+
+/*header start*/
+.pHeader {}
+
+.pHeader .header {
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+    left: 100px;
+    box-sizing: border-box;
+}
+
+.pHeader .header span {
+    font-weight: 700;
+    color: var(--blue)
+}
+
+.pHeader .header:before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    background: var(--lightBlue);
+    opacity: .8;
+    top: 55%;
+    transform: translateY(-50%);
+    left: -100px;
+
+}
+
+/*header end*/
+
+/*content body start*/
+
+.contentBody {
+    margin: 50px 0;
+    border: 1px solid var(--blue);
+    border-radius: 10px;
+    box-shadow: -5px 10px 15px var(--blue);
+    box-sizing: border-box;
+}
+
+/*input section start*/
+.inputSec {
+    display: flex;
+    padding: 30px 50px;
+    align-items: center;
+}
+
+.inputSec p {
+    flex-basis: 50%;
+}
+
+.inputSec p span {
+    color: var(--blue);
+    padding-right: 5px;
+}
+
+.inputSec .inputField {
+    flex-basis: 50%;
+    height: 30px;
+    border-radius: 10px;
+    background: var(--grey);
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: var(--white);
+    transition: all linear .3s;
+}
+
+.inputSec .inputField::placeholder {
+    color: var(--lightGrey);
+}
+
+.inputSec .inputField:focus {
+    background: var(--white);
+    color: #000;
+}
+
+.inputSec .inputField:focus::placeholder {
+    color: var(--grey);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*input section end*/
+
+/*result section start*/
+.resultSec {
+    display: flex;
+    padding: 30px 50px;
+}
+
+.resultSec .leftSec {
+    flex-basis: 50%;
+}
+
+.resultSec .leftSec p {
+    margin-bottom: 40px;
+}
+
+.resultSec .leftSec .resultWrapper {
+    font-size: 28px;
+}
+
+.resultSec .leftSec .resultWrapper .gName {
+    font-weight: 700;
+}
+
+.resultSec .leftSec .resultWrapper .edpiValue {
+    background: var(--green);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.resultSec .leftSec .sensWrapper {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.resultSec .leftSec .sensWrapper .senslvl {
+    font-weight: 700;
+}
+
+.resultSec .rightSec {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: end;
+    margin: 30px 0;
+}
+
+.resultSec .rightSec .meterWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultSec .rightSec .meterWrapper .meter {
+    width: 180px;
+    height: 90px;
+    border-radius: 12rem 12rem 0 0;
+    background-color: transparent;
+    border-style: solid;
+    border: 20px solid;
+    border-bottom: none;
+    border-top: 20px solid var(--yellow);
+    border-right-color: var(--tomato);
+    border-left-color: var(--green);
+    position: relative;
+}
+
+.resultSec .rightSec .meterWrapper #meterK {
+    content: "";
+    width: 0px;
+    height: 85px;
+    border: 5px solid var(--white);
+    border-bottom: none;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+    background: var(--grey);
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    transform-origin: bottom;
+    transform: rotate(0deg);
+}
+
+.resultSec .rightSec .meterWrapper .meter:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--white);
+    position: absolute;
+    bottom: -15px;
+    left: 40%;
+}
+
+.resultSec .rightSec .meterWrapper .mInfo {
+    margin-top: 30px;
+}
+
+.resultSec .rightSec .meterWrapper .mInfo .mInfoWrapper {
+    font-size: 13px;
+    font-weight: 400;
+    word-spacing: 3px;
+    color: var(--white)
+}
+
+.resultSec .rightSec .meterWrapper .mInfo .mInfoWrapper .lowSenslvl {
+    position: relative;
+    padding-left: 15px;
+}
+
+.resultSec .rightSec .meterWrapper .mInfo .mInfoWrapper .lowSenslvl:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--green);
+    position: absolute;
+    bottom: 2px;
+    left: 0px;
+}
+
+.resultSec .rightSec .meterWrapper .mInfo .mInfoWrapper .medSenslvl {
+    position: relative;
+    padding-left: 10px;
+}
+
+.resultSec .rightSec .meterWrapper .mInfo .mInfoWrapper .medSenslvl:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--yellow);
+    position: absolute;
+    bottom: 2px;
+    left: -5px;
+}
+
+.resultSec .rightSec .meterWrapper .mInfo .mInfoWrapper .highSenslvl {
+    position: relative;
+    padding-left: 5px;
+}
+
+.resultSec .rightSec .meterWrapper .mInfo .mInfoWrapper .highSenslvl:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--tomato);
+    position: absolute;
+    bottom: 2px;
+    left: -10px;
+}
+
+.pl10 {
+    padding: 10px;
+}
+
+
+/*result section end*/
+
+/*content body end*/
+
+
+/*responsive design start*/
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden !important;
+    }
+
+    .inputSec {
+        flex-direction: column;
+        padding: 30px 50px;
+        align-items: center;
+    }
+
+    .inputField {
+        margin-top: 10px;
+    }
+
+    .resultSec {
+        flex-direction: column;
+    }
+
+    .resultSec .leftSec .nText {
+        text-align: center;
+    }
+
+    .edpiValue {
+        margin-top: 10px;
+        display: block;
+    }
+
+    .resultSec .rightSec {
+        justify-content: center;
+    }
+
+    .mInfoWrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .lowSenslvl {
+        padding-left: 12px !important;
+    }
+
+    .lowSenslvl:before {
+        left: 25px !important;
+    }
+
+    .medSenslvl {
+        padding-left: 15px !important;
+    }
+
+    .medSenslvl:before {
+        left: 22px !important;
+    }
+
+    .highSenslvl {
+        padding-left: 12px !important;
+    }
+
+    .highSenslvl:before {
+        left: 28px !important;
+    }
+}
+
+/*responsive design end*/
