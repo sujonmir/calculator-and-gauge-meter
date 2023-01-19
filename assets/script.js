@@ -11,18 +11,22 @@ $(document).ready(function() {
         let img1 = document.getElementById('img1');
         let img2 = document.getElementById('img2');
         let img3 = document.getElementById('img3');
+        let img4 = document.getElementById('img4');
+        let img5 = document.getElementById('img5');
+        let img6 = document.getElementById('img6');
         let img1Name = img1.children[1].innerText;
         let img2Name = img2.children[1].innerText;
         let img3Name = img3.children[1].innerText;
+        let img4Name = img4.children[1].innerText;
+        let img5Name = img5.children[1].innerText;
+        let img6Name = img6.children[1].innerText;
         let result = 0;
         let preValue = -90;
         let addValue = 0;
         let deg = 0;
 
-
-
-        if (img1.classList.length == 2) {
-            result = (Number(dpi) * Number(sensitivity))/100
+        if (img1.classList.length == 3) {
+            result = (Number(dpi) * Number(sensitivity)) / 100
             let deci = (result - Math.floor(result)) != 0;
             if (deci) {
                 result = Number(Number(result).toFixed(3))
@@ -49,6 +53,9 @@ $(document).ready(function() {
             this.classList.add('imgClickEffect')
             img1.classList.remove('imgClickEffect')
             img3.classList.remove('imgClickEffect')
+            img4.classList.remove('imgClickEffect')
+            img5.classList.remove('imgClickEffect')
+            img6.classList.remove('imgClickEffect')
             gName.innerText = img2Name
 
         })
@@ -56,7 +63,37 @@ $(document).ready(function() {
             this.classList.add('imgClickEffect')
             img1.classList.remove('imgClickEffect')
             img2.classList.remove('imgClickEffect')
+            img4.classList.remove('imgClickEffect')
+            img5.classList.remove('imgClickEffect')
+            img6.classList.remove('imgClickEffect')
             gName.innerText = img3Name
+        })
+        img4.addEventListener('click', function() {
+            this.classList.add('imgClickEffect')
+            img1.classList.remove('imgClickEffect')
+            img2.classList.remove('imgClickEffect')
+            img3.classList.remove('imgClickEffect')
+            img5.classList.remove('imgClickEffect')
+            img6.classList.remove('imgClickEffect')
+            gName.innerText = img4Name
+        })
+        img5.addEventListener('click', function() {
+            this.classList.add('imgClickEffect')
+            img1.classList.remove('imgClickEffect')
+            img2.classList.remove('imgClickEffect')
+            img3.classList.remove('imgClickEffect')
+            img4.classList.remove('imgClickEffect')
+            img6.classList.remove('imgClickEffect')
+            gName.innerText = img5Name
+        })
+        img6.addEventListener('click', function() {
+            this.classList.add('imgClickEffect')
+            img1.classList.remove('imgClickEffect')
+            img2.classList.remove('imgClickEffect')
+            img3.classList.remove('imgClickEffect')
+            img4.classList.remove('imgClickEffect')
+            img5.classList.remove('imgClickEffect')
+            gName.innerText = img6Name
         })
 
 
@@ -100,5 +137,8 @@ $(document).ready(function() {
             meterK.style.transform = `rotate(${90}deg)`
         }
 
+
     }
 });
+
+

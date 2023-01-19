@@ -156,16 +156,19 @@ body {
 .imgSec {
     flex-basis: 50%;
     display: flex;
-    justify-content: center;
+    /*justify-content: flex-start;*/
     text-align: center;
     margin-top: 10px;
+    overflow-x: hidden;
+    /*flex-flow: row nowrap;*/
 }
 
 .imgSec .imgWrapper {
-    flex-basis: 33%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /*display: flex;*/
+    /*display: block;*/
+    flex-basis: 50% !important;
+    width: 200px;
+    /*flex-direction: column;*/
 }
 
 .imgSec .imgWrapper:hover {
@@ -388,6 +391,9 @@ input[type=number] {
 @media only screen and (max-width: 600px) {
     body {
         overflow-x: hidden !important;
+    }
+    .pHeader .header{
+    	font-size: 28px;
     }
 
     .inputSec {

@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
     <!-- jQuery start -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <!-- jQuery end -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/css/glide.theme.min.css">
+    <link rel="stylesheet" href="./assets/slider.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Fortnite eDPI Calculator</title>
 </head>
 
@@ -17,8 +20,9 @@
             <h1 class="header"><span>eDPI</span> Calculator</h1>
         </section>
         <section id="contentBody" class="contentBody">
-            <div class="inputSec">
-                <p class="nText"><span>1.</span>  Choose Game</p>
+            <!-- game selection part start -->
+            <!-- <div class="inputSec">
+                <p class="nText"><span>1.</span> Choose Game</p>
                 <div class="imgSec">
                     <div class="imgWrapper" id="img1">
                         <div class="img">
@@ -38,8 +42,85 @@
                         </div>
                         <div class="txt">Valorant</div>
                     </div>
+                    <div class="imgWrapper" id="img4">
+                        <div class="img">
+                            <img src="./assets/img/apex legends.jpg" alt="Apex Legends" class="">
+                        </div>
+                        <div class="txt">Apex Legends</div>
+                    </div>
+                    <div class="imgWrapper" id="img5">
+                        <div class="img">
+                            <img src="./assets/img/call of duty.jpg" alt="Call of Duty" class="">
+                        </div>
+                        <div class="txt">Call of Duty</div>
+                    </div>
+                    <div class="imgWrapper" id="img6">
+                        <div class="img">
+                            <img src="./assets/img/overwatch.jpg" alt="Overwatch" class="">
+                        </div>
+                        <div class="txt">Overwatch</div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- game selection part end -->
+            <!-- additional start -->
+            <div class="inputSec">
+                <p class="nText"><span>1.</span> Choose Game</p>
+                <div class="glide imgSec">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <div class="imgWrapper" id="img1">
+                                <div class="img">
+                                    <img src="./assets/img/fortnite.jpg" alt="Fortnite" class="">
+                                </div>
+                                <div class="txt">Fortnite</div>
+                            </div>
+                            <div class="imgWrapper" id="img2">
+                                <div class="img">
+                                    <img src="./assets/img/csgo.jpg" alt="CS-GO" class="">
+                                </div>
+                                <div class="txt">CS-GO</div>
+                            </div>
+                            <div class="imgWrapper" id="img3">
+                                <div class="img">
+                                    <img src="./assets/img/valorant.jpg" alt="Valorant" class="">
+                                </div>
+                                <div class="txt">Valorant</div>
+                            </div>
+                            <div class="imgWrapper" id="img4">
+                                <div class="img">
+                                    <img src="./assets/img/apex legends.jpg" alt="Apex Legends" class="">
+                                </div>
+                                <div class="txt">Apex Legends</div>
+                            </div>
+                            <div class="imgWrapper" id="img5">
+                                <div class="img">
+                                    <img src="./assets/img/call of duty.jpg" alt="Call of Duty" class="">
+                                </div>
+                                <div class="txt">Call of Duty</div>
+                            </div>
+                            <div class="imgWrapper" id="img6">
+                                <div class="img">
+                                    <img src="./assets/img/overwatch.jpg" alt="Overwatch" class="">
+                                </div>
+                                <div class="txt">Overwatch</div>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- <a href="https://www.jqueryscript.net/tags.php?/Navigation/">Navigation</a> -->
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+                    </div>
+                    <!-- Pagination -->
+                    <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
+                    </div> -->
                 </div>
             </div>
+            <!-- additional end -->
             <div class="inputSec bgLight">
                 <p class="nText"><span>2. </span> Input DPI</p>
                 <input type="number" class="inputField" placeholder="Enter your mouse DPI" id="dpi">
@@ -82,6 +163,8 @@
         </section>
     </div>
     <script src="./assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/glide.min.js"></script>
+    <script src="./assets/customSlider.js"></script>
 </body>
 
 </html>
