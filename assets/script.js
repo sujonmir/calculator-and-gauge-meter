@@ -18,26 +18,48 @@ $(document).ready(function() {
         let preValue = -90;
         let addValue = 0;
         let deg = 0;
-        result = (Number(dpi) * Number(sensitivity)).toFixed(3)
 
-        img1.addEventListener('click',function(){
+
+
+        if (img1.classList.length == 2) {
+            result = Number(dpi) / Number(sensitivity)
+            let deci = (result - Math.floor(result)) != 0;
+            if (deci) {
+                result = Number(Number(result).toFixed(3))
+            }
+        } else {
+            result = Number(dpi) * Number(sensitivity)
+            let deci = (result - Math.floor(result)) != 0;
+            if (deci) {
+                result = Number(Number(result).toFixed(3))
+            }
+        }
+        img1.addEventListener('click', function() {
             this.classList.add('imgClickEffect')
             img2.classList.remove('imgClickEffect')
             img3.classList.remove('imgClickEffect')
-            gName.innerText= img1Name
+            gName.innerText = img1Name
+            result = Number(dpi) / Number(sensitivity)
+            deci = (result - Math.floor(result)) != 0;
+            if (deci) {
+                result = Number(Number(result).toFixed(3))
+            }
         })
-        img2.addEventListener('click',function(){
+        img2.addEventListener('click', function() {
             this.classList.add('imgClickEffect')
             img1.classList.remove('imgClickEffect')
             img3.classList.remove('imgClickEffect')
-            gName.innerText= img2Name
+            gName.innerText = img2Name
+
         })
-        img3.addEventListener('click',function(){
+        img3.addEventListener('click', function() {
             this.classList.add('imgClickEffect')
             img1.classList.remove('imgClickEffect')
             img2.classList.remove('imgClickEffect')
-            gName.innerText= img3Name
+            gName.innerText = img3Name
         })
+
+
         if (result != 0) {
             edpiValue.innerText = result
         } else {
@@ -59,19 +81,19 @@ $(document).ready(function() {
             senslvl.innerText = 'Medium'
             senslvl.style.color = '#ecfd06'
             gName.style.color = '#ecfd06'
-            preValue= -43
-            addValue = Math.round(2.225 * (result-40))
+            preValue = -43
+            addValue = Math.round(2.225 * (result - 40))
             deg = preValue + addValue
             meterK.style.transform = `rotate(${deg}deg)`
         } else if (result <= 100) {
             senslvl.innerText = 'High'
             senslvl.style.color = '#fd4400'
             gName.style.color = '#fd4400'
-            preValue= 46
-            addValue = Math.round(2.2 * (result-80))
+            preValue = 46
+            addValue = Math.round(2.2 * (result - 80))
             deg = preValue + addValue
             meterK.style.transform = `rotate(${deg}deg)`
-        }else{
+        } else {
             senslvl.innerText = 'High'
             senslvl.style.color = '#fd4400'
             gName.style.color = '#fd4400'
