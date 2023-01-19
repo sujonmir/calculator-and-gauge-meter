@@ -8,14 +8,37 @@ $(document).ready(function() {
         let senslvl = document.getElementById('senslvl');
         let gName = document.getElementById('gName');
         let meterK = document.getElementById('meterK');
+        let img1 = document.getElementById('img1');
+        let img2 = document.getElementById('img2');
+        let img3 = document.getElementById('img3');
+        let img1Name = img1.children[1].innerText;
+        let img2Name = img2.children[1].innerText;
+        let img3Name = img3.children[1].innerText;
         let result = 0;
         let preValue = -90;
         let addValue = 0;
         let deg = 0;
+        result = (Number(dpi) * Number(sensitivity)).toFixed(3)
 
-
-        result = Number(dpi) * Number(sensitivity)
-        if (result !== 0) {
+        img1.addEventListener('click',function(){
+            this.classList.add('imgClickEffect')
+            img2.classList.remove('imgClickEffect')
+            img3.classList.remove('imgClickEffect')
+            gName.innerText= img1Name
+        })
+        img2.addEventListener('click',function(){
+            this.classList.add('imgClickEffect')
+            img1.classList.remove('imgClickEffect')
+            img3.classList.remove('imgClickEffect')
+            gName.innerText= img2Name
+        })
+        img3.addEventListener('click',function(){
+            this.classList.add('imgClickEffect')
+            img1.classList.remove('imgClickEffect')
+            img2.classList.remove('imgClickEffect')
+            gName.innerText= img3Name
+        })
+        if (result != 0) {
             edpiValue.innerText = result
         } else {
             edpiValue.innerText = '-'
