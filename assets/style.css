@@ -396,11 +396,7 @@ input[type=number] {
     	font-size: 28px;
     }
 
-    .inputSec {
-        flex-direction: column;
-        padding: 30px 50px;
-        align-items: center;
-    }
+    
 
     .nText {
         margin-bottom: 10px;

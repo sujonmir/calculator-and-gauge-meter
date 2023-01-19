@@ -21,50 +21,7 @@
         </section>
         <section id="contentBody" class="contentBody">
             <!-- game selection part start -->
-            <!-- <div class="inputSec">
-                <p class="nText"><span>1.</span> Choose Game</p>
-                <div class="imgSec">
-                    <div class="imgWrapper" id="img1">
-                        <div class="img">
-                            <img src="./assets/img/fortnite.jpg" alt="Fortnite" class="">
-                        </div>
-                        <div class="txt">Fortnite</div>
-                    </div>
-                    <div class="imgWrapper" id="img2">
-                        <div class="img">
-                            <img src="./assets/img/csgo.jpg" alt="CS-GO" class="">
-                        </div>
-                        <div class="txt">CS-GO</div>
-                    </div>
-                    <div class="imgWrapper" id="img3">
-                        <div class="img">
-                            <img src="./assets/img/valorant.jpg" alt="Valorant" class="">
-                        </div>
-                        <div class="txt">Valorant</div>
-                    </div>
-                    <div class="imgWrapper" id="img4">
-                        <div class="img">
-                            <img src="./assets/img/apex legends.jpg" alt="Apex Legends" class="">
-                        </div>
-                        <div class="txt">Apex Legends</div>
-                    </div>
-                    <div class="imgWrapper" id="img5">
-                        <div class="img">
-                            <img src="./assets/img/call of duty.jpg" alt="Call of Duty" class="">
-                        </div>
-                        <div class="txt">Call of Duty</div>
-                    </div>
-                    <div class="imgWrapper" id="img6">
-                        <div class="img">
-                            <img src="./assets/img/overwatch.jpg" alt="Overwatch" class="">
-                        </div>
-                        <div class="txt">Overwatch</div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- game selection part end -->
-            <!-- additional start -->
-            <div class="inputSec">
+            <div class="inputSec onlyM">
                 <p class="nText"><span>1.</span> Choose Game</p>
                 <div class="glide imgSec">
                     <div class="glide__track" data-glide-el="track">
@@ -108,9 +65,14 @@
                         </ul>
                     </div>
                     <!-- <a href="https://www.jqueryscript.net/tags.php?/Navigation/">Navigation</a> -->
-                    <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+                    <!-- <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                            <</button> <button class="glide__arrow glide__arrow--right" data-glide-dir=">">>
+                        </button>
+                    </div> -->
+                    <div data-glide-el="controls">
+                        <button data-glide-dir="<" class="leftB"><</button>
+                        <button data-glide-dir=">" class="rightB">></button>
                     </div>
                     <!-- Pagination -->
                     <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -120,7 +82,7 @@
                     </div> -->
                 </div>
             </div>
-            <!-- additional end -->
+            <!-- game selection part end -->
             <div class="inputSec bgLight">
                 <p class="nText"><span>2. </span> Input DPI</p>
                 <input type="number" class="inputField" placeholder="Enter your mouse DPI" id="dpi">
