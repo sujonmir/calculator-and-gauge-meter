@@ -2,16 +2,25 @@
 .leftB {
     color: var(--grey);
     font-size: 24px;
-    padding: 2px;
     font-weight: bold;
     border: none;
     outline: none;
     background: var(--white);
     transition: all linear .2s;
+    top: 30%;
+    padding: 5px 11px;
+    border-radius: 50%;
+    opacity: .8;
 }
-.rightB{
-	margin-bottom: 10px !important;
-	display: inline-block;
+
+.rightB {
+    position: absolute;
+    right: 0;
+}
+
+.leftB {
+    position: absolute;
+    left: 0;
 }
 
 .leftB:hover,
@@ -22,9 +31,19 @@
 
 
 @media only screen and (max-width: 600px) {
-	.rightB,
+
+    .rightB,
+    .leftB {
+        top: 70% !important;
+        padding: 5px 13px;
+        border-radius: 50%;
+        transform: scale(.7);
+    }
+    .rightB{
+    	right: 40%;
+    }
     .leftB{
-    	padding:5px;
+    	left: 40%;
     }
 
     .inputSec {
@@ -39,8 +58,9 @@
         border: 1px solid transparent;
         transition: all linear .2s;
     }
-    .onlyM{
-    	margin: 30px 10px !important;
-    	padding: 0 !important;
+
+    .onlyM {
+        margin: 30px 10px !important;
+        padding: 0 !important;
     }
 }
