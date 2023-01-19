@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 
         if (img1.classList.length == 2) {
-            result = (Number(dpi) / Number(sensitivity))/4
+            result = (Number(dpi) * Number(sensitivity))/100
             let deci = (result - Math.floor(result)) != 0;
             if (deci) {
                 result = Number(Number(result).toFixed(3))
